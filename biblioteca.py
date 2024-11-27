@@ -121,12 +121,12 @@ def dibujar_grilla(pantalla:pygame.Surface, tablero:list, FILAS:int, COLUMNAS:in
         for columna in range(COLUMNAS):
             x = columna * TAMANIO_CASILLA
             y = fila * TAMANIO_CASILLA
-
+            
             if tablero[fila][columna] == 2: 
-                pygame.draw.rect(pantalla, FALLADO, (x, y, TAMANIO_CASILLA, TAMANIO_CASILLA))   
+                pantalla.blit(imagen_acierto, (x, y))  
 
             elif tablero[fila][columna] == -1: 
-                pass 
+                pygame.draw.rect(pantalla, FALLADO, (x, y, TAMANIO_CASILLA, TAMANIO_CASILLA))  
 
             else:
                 pygame.draw.rect(pantalla, GRIS, (x, y, TAMANIO_CASILLA, TAMANIO_CASILLA))  
