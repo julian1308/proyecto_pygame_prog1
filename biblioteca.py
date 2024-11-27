@@ -23,9 +23,9 @@ TAMANIO_CASILLA = 500// FILAS
 
 #carga de imagenes
 imagen_oceano = pygame.image.load("C1_2024.py/2do_parcial_pygame.py/imagenes\oceano.jpg")
-imagen_menu = pygame.image.load("C1_2024.py/2do_parcial_pygame.py/imagenes\imagen_menu.jpg")
-imagen_icono = pygame.image.load("C1_2024.py/2do_parcial_pygame.py/imagenes\imagen_icono.jpg")
-imagen_acierto = pygame.image.load("C1_2024.py/2do_parcial_pygame.py/imagenes\explosion.png")
+imagen_menu = pygame.image.load("C1_2024.py/2do_parcial_pygame.py/imagenes/imagen_menu.jpg")
+imagen_icono = pygame.image.load("C1_2024.py/2do_parcial_pygame.py/imagenes/imagen_icono.jpg")
+imagen_acierto = pygame.image.load("C1_2024.py/2do_parcial_pygame.py/imagenes/explosion.png")
 
 imagen_acierto = pygame.transform.scale(imagen_acierto, (TAMANIO_CASILLA, TAMANIO_CASILLA))
 imagen_menu_agrandada = pygame.transform.scale(imagen_menu, (ANCHO, ALTO))
@@ -224,7 +224,7 @@ def menu_principal(pantalla: pygame.Surface)->str:
                 pygame.quit()
                 sys.exit()
             if evento.type == pygame.MOUSEBUTTONDOWN:
-                sonido_botones = pygame.mixer.Sound("C1_2024.py/2do_parcial_pygame.py/sonidos\sonido_boton.wav")
+                sonido_botones = pygame.mixer.Sound("C1_2024.py/2do_parcial_pygame.py/sonidos/sonido_boton.wav")
                 sonido_botones.play()
                 
                 if jugar_rect.collidepoint(evento.pos):
@@ -279,7 +279,7 @@ def mostrar_pantalla_dificultad(pantalla :pygame.surface)->str:
 
             if evento.type == pygame.MOUSEBUTTONDOWN:
                 coordenadas_click = pygame.mouse.get_pos()
-                sonido_botones = pygame.mixer.Sound("C1_2024.py/2do_parcial_pygame.py/sonidos\sonido_boton.wav")
+                sonido_botones = pygame.mixer.Sound("C1_2024.py/2do_parcial_pygame.py/sonidos/sonido_boton.wav")
                 if rectangulo_facil.collidepoint(coordenadas_click):
                 
                     sonido_botones.play()
@@ -352,7 +352,7 @@ def mostrar_pantalla_puntajes(pantalla:pygame.Surface):
 
             if evento.type == pygame.MOUSEBUTTONDOWN:
                 coordenadas_click = pygame.mouse.get_pos()
-                sonido_botones = pygame.mixer.Sound("C1_2024.py/2do_parcial_pygame.py\sonidos\sonido_boton.wav")
+                sonido_botones = pygame.mixer.Sound("C1_2024.py/2do_parcial_pygame.py/sonidos/sonido_boton.wav")
 
                 if rectangulo_salir.collidepoint(coordenadas_click):
                     sonido_botones.play()
