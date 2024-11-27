@@ -422,7 +422,7 @@ def pedir_nombre(pantalla:pygame.Surface, puntaje):
     guardar_puntaje(nombre, puntaje)
 
     pantalla.fill(BLANCO)
-    texto_guardado = fuente.render("Puntaje guardado con éxito!", True, NEGRO)
+    texto_guardado = fuente.render("Puntaje guardado.", True, NEGRO)
     pantalla.blit(texto_guardado, (250, 200))
     pygame.display.flip()
 
