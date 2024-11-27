@@ -13,10 +13,10 @@ pygame.display.set_caption("Batalla Naval")
 pygame.display.set_icon(imagen_icono)
 
 
-pygame.mixer.music.load("C1_2024.py/2do_parcial_pygame.py/sonidos\sonido_menuu.wav")
+pygame.mixer.music.load("C1_2024.py/2do_parcial_pygame.py/sonidos/sonido_menuu.wav")
 pygame.mixer.music.set_volume(0.2)  
 pygame.mixer.music.play(-1, 0.0)
-sonido_clic_juego = pygame.mixer.Sound("C1_2024.py/2do_parcial_pygame.py/sonidos\sonido_cañones.wav")
+sonido_clic_juego = pygame.mixer.Sound("C1_2024.py/2do_parcial_pygame.py/sonidos/sonido_cañones.wav")
 pygame.mixer.Sound.set_volume((sonido_clic_juego), 0.2)
 
 
